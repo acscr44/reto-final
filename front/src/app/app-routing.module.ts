@@ -25,12 +25,15 @@ import {RouterModule, Routes} from '@angular/router';
 import {PageNotFoundComponent} from './parts/page-not-found/page-not-found.component';
 import {WelcomeComponent} from './parts/welcome/welcome.component';
 import {OfertaComponent} from './oferta/oferta.component';
+import {ListaValidadaComponent} from './oferta/lista-validada/lista-validada.component';
+
 
 
 const appRoutes: Routes = [
   {path: 'welcome', component: WelcomeComponent},
   {path: '', component: WelcomeComponent},
   {path: 'ofertas', component: OfertaComponent},
+  {path: 'ofertas/activos', component: ListaValidadaComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

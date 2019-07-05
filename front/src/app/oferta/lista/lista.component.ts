@@ -11,10 +11,10 @@ export class ListaComponent implements OnInit {
   constructor(private servicio: ServiceService) { }
 
   ngOnInit() {
-    this.servicio.getOfertas().subscribe(data=>{
-      this.lista=data;
-      
-    })
+    this.servicio.getOfertas().subscribe(data => {
+      this.lista = data;
+
+    });
   }
 
 }

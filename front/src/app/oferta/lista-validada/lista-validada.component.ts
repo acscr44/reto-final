@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService} from '../service.service';
+
 
 @Component({
   selector: 'app-lista-validada',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaValidadaComponent implements OnInit {
 
-  constructor() { }
+  listaactivos;
+  constructor(private servicio: ServiceService) { }
 
   ngOnInit() {
+    this.Activos();
   }
-
-}
+    Activos() {
+      this.servicio.getActivos().subscribe(data => {
+        this.listaactivos = data;
+        console.log(data);
+      });
+    }
+  }
