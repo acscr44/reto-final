@@ -26,6 +26,7 @@ import {PageNotFoundComponent} from './parts/page-not-found/page-not-found.compo
 import {WelcomeComponent} from './parts/welcome/welcome.component';
 import {OfertaComponent} from './oferta/oferta.component';
 import {ListaValidadaComponent} from './oferta/lista-validada/lista-validada.component';
+import { ListaComponent } from './oferta/lista/lista.component';
 
 
 
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
   {path: '', component: WelcomeComponent},
   {path: 'ofertas', component: OfertaComponent},
   {path: 'ofertas/activos', component: ListaValidadaComponent},
+  {path: 'ofertasadd', component: ListaComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
